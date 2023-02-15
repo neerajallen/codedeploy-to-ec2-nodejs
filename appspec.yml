@@ -8,7 +8,7 @@ permissions:
     pattern: "**"
     owner: ubuntu
     group: ubuntu
-    mode: 0755
+    mode: u+rwx
     #hello
 hooks:
   AfterInstall:
