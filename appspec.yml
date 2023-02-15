@@ -4,17 +4,18 @@ files:
   - source: /
     destination: /home/ubuntu
 permissions:
-  - object: /
+  - object: /home/ubuntu/
     pattern: "**"
     owner: ubuntu
     group: ubuntu
+    mode : 755
     
 hooks:
   AfterInstall:
     - location: afterinstall.sh
-      timeout: 100
-      runas: ubuntu
+      timeout: 300
+      #runas: ubuntu
   ApplicationStart:
     - location: applicationstart.sh
-      timeout: 100
-      runas: ubuntu
+      timeout: 300
+      #runas: ubuntu
