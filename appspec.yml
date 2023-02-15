@@ -8,12 +8,13 @@ permissions:
     pattern: "**"
     owner: ubuntu
     group: ubuntu
-    mode: u+rwx
-    #hello
+    
 hooks:
   AfterInstall:
     - location: afterinstall.sh
       timeout: 100
+      runas: ubuntu
   ApplicationStart:
     - location: applicationstart.sh
       timeout: 100
+      runas: ubuntu
