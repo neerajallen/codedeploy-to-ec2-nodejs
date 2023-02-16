@@ -6,16 +6,16 @@ files:
 permissions:
   - object: /home/ubuntu/
     pattern: "**"
-    owner: ubuntu
-    group: ubuntu
+    owner: root
+    group: root
     mode : 755
     
 hooks:
   AfterInstall:
     - location: afterinstall.sh
       timeout: 300
-      runas: ubuntu
+      runas: root
   ApplicationStart:
     - location: applicationstart.sh
       timeout: 300
-      runas: ubuntu
+      runas: root
